@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-// import shortid from 'shortid';
 import styles from './App.module.scss';
 import ContactList from './contactList/ContactList';
 import ContactForm from './contactForm/ContactForm';
@@ -61,7 +60,7 @@ class App extends Component {
   };
 
   render() {
-    const {  filter } = this.state;
+    const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
 
     return (
@@ -79,8 +78,7 @@ class App extends Component {
         <ContactForm onSubmit={this.addContact} />
 
         <h2 className={styles.titleContacts}>Contacts</h2>
-        <div className={styles.allContacts}>
-        </div>
+        <div className={styles.allContacts}></div>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           contacts={visibleContacts}
